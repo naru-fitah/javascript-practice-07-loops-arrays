@@ -64,14 +64,43 @@ console.log(wordFilter(word))
 // Return a new array containing only the first letter of each string.
 // Input: ["Apple", "Banana"] → Output: ["A", "B"]
 
+let fruit = ["Apple", "Banana", "Orange", "Kiwi"]
 
+function getFirstLetter(arr) {
+    let newArr = []
+
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i][0]);
+    }
+
+    return newArr
+}
+
+console.log(getFirstLetter(fruit)) // Or in a shorter way : function getFirstLetter(arr) { return arr.map(word => word[0]); }
 
 // 06. Count Strings
 // Write a loop that counts how many items in an array are strings.
 
+let dataTest = ["string", "string", "string", "string", "string", false, 10, "string"]
+
+function countStrings(arr) {
+    
+    let count = 0
+    for (i = 0; i < arr.length; i++) {
+        
+        if (arr[i] === typeof "string") {
+            count++
+        }
+    }
+    return count
+}
+console.log(countStrings(dataTest))
+
 
 // 07. Sum Numbers
 // Write a loop that adds up all the numbers in an array and returns the total.
+
+
 
 
 // 08. Print in Reverse
