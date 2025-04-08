@@ -101,15 +101,76 @@ console.log(countStrings(dataTest))
 // Write a loop that adds up all the numbers in an array and returns the total.
 
 
+let numbersArr = [1, 11, 20, 8, 1]
 
+function sumNumbers(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    return sum
+}
+console.log(sumNumbers(numbersArr))
 
 // 08. Print in Reverse
 // Use a loop to print each item in an array from last to first.
+
+let numbers = [1, 2, 3, 4, 5]
+
+function reversePrint(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i]);
+    }
+
+    // let i = numbers.length - 1; (Initial State)
+    // = 5 - 1
+    // = 4 → so we start at index 4 (which is number 5)
+
+    // i >= 0 (Condition)
+    // Keep going as long as we haven’t passed index 0
+
+    // i-- (Update)
+    // Decrease i by 1 each time
+
+
+
+}
+
+reversePrint(numbers);
 
 
 // 09. Find Longest Word
 // Return the longest word in an array of strings.
 
+let colors = ["blue", "orange", "pink", "red"]
+
+function findLongestWord(arr) {
+    let word = ""
+    for (let i = 0; i < arr.length; i++) {
+       if (word.length < arr[i].length) {
+        word = arr[i]
+       }
+    }
+    return word
+}
+
+console.log(findLongestWord(colors))
+
 
 // 10. Capitalize All
 // Return a new array with all strings in uppercase.
+
+function capitalizeColors(arr) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i].toUpperCase())
+    }
+    return newArr
+}
+
+// OR SHORTER WAY : function capitalizeColors(arr) {
+    // return arr.map(color => color.toUpperCase());
+// }
+
+
+console.log(capitalizeColors(colors))
